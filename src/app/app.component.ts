@@ -7,10 +7,10 @@ import { Publics } from './publics'
 })
 export class AppComponent {
   quotes = [
-    new Publics(1, 'fgf'),
-    new Publics(2, 'djd'),
-    new Publics(3, 'kks'),
-    new Publics(3, 'kks'),
-    new Publics(3, 'kks'),
+    new Publics(1, 'first quote','this is new'),
+    new Publics(2, 'second quote','this is new'),
+    new Publics(3, 'third quote','this is new'),
+    new Publics(3, 'fouth quote','this is new'),
+    new Publics(3, 'fifth quote','this is new'),
   ]
 }
