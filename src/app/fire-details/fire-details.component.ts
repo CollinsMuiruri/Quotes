@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Publics } from '../publics';
 
 
@@ -9,7 +9,12 @@ import { Publics } from '../publics';
 })
 export class FireDetailsComponent implements OnInit {
 
-@Input() Publics:Publics;
+  @Input() Publics: Publics;
+  @Output() isComplete = new EventEmitter<boolean>();
+
+  quoteComplete(complete: boolean) {
+    this.isComplete.emit(complete);
+  }
   constructor() { }
 
   ngOnInit() {

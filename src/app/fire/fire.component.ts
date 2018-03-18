@@ -17,6 +17,12 @@ export class FireComponent implements OnInit {
     new Publics(3, 'fifth quote', 'this is new'),
   ]
 
+  completeQuote(isComplete, index) {
+    if (isComplete) {
+      this.quotes.splice(index, 1);
+    }
+  }
+
   toggling(index) {
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
   }

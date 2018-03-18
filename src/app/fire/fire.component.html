@@ -5,7 +5,7 @@
   <div *ngFor='let Publics of quotes;let i= index'>
     <li>{{Publics.name}}</li>
     <button (click)='toggling(i)'>Toggle</button>
-    <app-fire-details *ngIf="Publics.showDescription" ></app-fire-details>
+    <app-fire-details *ngIf="Publics.showDescription" (isComplete)='completeQuote($event,i)'></app-fire-details>
   </div>
 </ul>
 <p *ngIf='quotes.length > 4'>Wow you've been busy today!</p>
